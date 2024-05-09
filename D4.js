@@ -4,14 +4,14 @@
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function area(l1, l2) {
+const area = function (l1, l2) {
   return l1 * l2;
-}
+};
 
-const returnArea1 = area(5, 2);
-const returnArea2 = area(3, 4);
-console.log("l1 = 5; l2 = 2; area del rettangolo: ", returnArea1);
-console.log("l1 = 3; l2 = 4; area del rettangolo: ", returnArea2);
+const areaResult1 = area(5, 2);
+const areaResult2 = area(3, 4);
+console.log("l1 = 5; l2 = 2; area del rettangolo: ", areaResult1);
+console.log("l1 = 3; l2 = 4; area del rettangolo: ", areaResult2);
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -21,18 +21,18 @@ console.log("l1 = 3; l2 = 4; area del rettangolo: ", returnArea2);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function crazySum(num1, num2) {
+const crazySum = function (num1, num2) {
   if (num1 !== num2) {
     return num1 + num2;
   } else {
     return (num1 + num2) * 3;
   }
-}
+};
 
-const resultCrazySum1 = crazySum(5, 3);
-const resultCrazySum2 = crazySum(2, 2);
-console.log("num1 = 5; num2 = 3; risultato: ", resultCrazySum1);
-console.log("num1 = 2; num2 = 2; risultato: ", resultCrazySum2);
+const crazySumResult1 = crazySum(5, 3);
+const crazySumResult2 = crazySum(2, 2);
+console.log("num1 = 5; num2 = 3; risultato: ", crazySumResult1);
+console.log("num1 = 2; num2 = 2; risultato: ", crazySumResult2);
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
@@ -41,18 +41,18 @@ console.log("num1 = 2; num2 = 2; risultato: ", resultCrazySum2);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function crazyDiff(num3, num4 = 19) {
-  if (num3 < 19) {
-    return Math.abs(num3 - num4);
+const crazyDiff = function (num) {
+  if (num < 19) {
+    return Math.abs(num - 19);
   } else {
-    return Math.abs(num3 - num4) * 3;
+    return Math.abs(num - 19) * 3;
   }
-}
+};
 
-const resultCrazyDiff1 = crazyDiff(18);
-const resultCrazyDiff2 = crazyDiff(26);
-console.log(resultCrazyDiff1);
-console.log(resultCrazyDiff2);
+const crazyDiffResult1 = crazyDiff(18);
+const crazyDiffResult2 = crazyDiff(26);
+console.log(crazyDiffResult1);
+console.log(crazyDiffResult2);
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -61,26 +61,24 @@ console.log(resultCrazyDiff2);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function boundary(n) {
-  if (n >= 20 && n <= 100) {
-    return true;
-  } else if (n === 400) {
+const boundary = function (n) {
+  if ((n >= 20 && n <= 100) || n === 400) {
     return true;
   } else {
     return false;
   }
-}
+};
 
-const resultBoundary1 = boundary(20);
-const resultBoundary2 = boundary(77);
-const resultBoundary3 = boundary(100);
-const resultBoundary4 = boundary(400);
-const resultBoundary5 = boundary(15);
-console.log("n = 20; result: ", resultBoundary1);
-console.log("n = 77; result: ", resultBoundary2);
-console.log("n = 100; result: ", resultBoundary3);
-console.log("n = 400; result: ", resultBoundary4);
-console.log("n = 15; result: ", resultBoundary5);
+const boundaryResult1 = boundary(20);
+const boundaryResult2 = boundary(77);
+const boundaryResult3 = boundary(100);
+const boundaryResult4 = boundary(400);
+const boundaryResult5 = boundary(15);
+console.log("n = 20; result: ", boundaryResult1);
+console.log("n = 77; result: ", boundaryResult2);
+console.log("n = 100; result: ", boundaryResult3);
+console.log("n = 400; result: ", boundaryResult4);
+console.log("n = 15; result: ", boundaryResult5);
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -90,19 +88,19 @@ console.log("n = 15; result: ", resultBoundary5);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function epify(stringa1) {
-  const firstWord = stringa1.split(" ")[0];
+const epify = function (str) {
+  const firstWord = str.split(" ")[0];
   if (firstWord !== "EPICODE") {
-    return (stringa1 = "EPICODE " + stringa1);
+    return (str = "EPICODE " + str);
   } else {
-    return stringa1;
+    return str;
   }
-}
+};
 
-const resultEpify1 = epify("ciao come va");
-const resultEpify2 = epify("EPICODE ciao come va");
-console.log(resultEpify1);
-console.log(resultEpify2);
+const epifyResult1 = epify("ciao come va");
+const epifyResult2 = epify("EPICODE ciao come va");
+console.log(epifyResult1);
+console.log(epifyResult2);
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -111,7 +109,7 @@ console.log(resultEpify2);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function check3and7(n) {
+const check3and7 = function (n) {
   if (n % 3 === 0 && n % 7 !== 0) {
     return "multiplo di 3";
   } else if (n % 7 === 0 && n % 3 !== 0) {
@@ -121,17 +119,17 @@ function check3and7(n) {
   } else {
     return "non multiplo di 3 o di 7";
   }
-}
+};
 
-const resultCheck1 = check3and7(9);
-const resultCheck2 = check3and7(14);
-const resultCheck3 = check3and7(21);
-const resultCheck4 = check3and7(4);
+const checkResult1 = check3and7(9);
+const checkResult2 = check3and7(14);
+const checkResult3 = check3and7(21);
+const checkResult4 = check3and7(4);
 
-console.log(resultCheck1);
-console.log(resultCheck2);
-console.log(resultCheck3);
-console.log(resultCheck4);
+console.log(checkResult1);
+console.log(checkResult2);
+console.log(checkResult3);
+console.log(checkResult4);
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
@@ -139,17 +137,14 @@ console.log(resultCheck4);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-/* function reverseString(stringa1) {
-  const arrayStringa = [];
-  arrayStringa.push(stringa1.split(""));
-  console.log(arrayStringa);
-  const revArray = arrayStringa.reverse();
-  return revArray;
-  console.log(revArray);
-}
+const reverseString = function (str) {
+  let splitString = str.split("");
+  let reverseString = splitString.reverse();
+  let finalString = reverseString.join();
+  return finalString;
+};
 
-const resultReverse = reverseString("EPICODE");
-console.log(resultReverse); */
+console.log(reverseString("EPICODE"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -160,8 +155,6 @@ console.log(resultReverse); */
 
 function upperFirst(phrase) {
   const parole = phrase.split(" ");
-  console.log(parole);
-  console.log(parole.length);
   for (let i = 0; i < parole.length; i++) {
     parole[i] = parole[i].charAt(0).toUpperCase() + parole[i].slice(1);
   }
@@ -178,8 +171,24 @@ console.log(risultato);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const cutString = function (str) {
+  return str.slice(1, str.length - 1);
+};
+
+console.log(cutString("EPICODE"));
+
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const giveMeRandom = function (n) {
+  const arr = [];
+  for (i = 0; i < n; i++) {
+    arr.push(Math.floor(Math.random() * 10));
+  }
+  return arr;
+};
+
+console.log(giveMeRandom(5));
