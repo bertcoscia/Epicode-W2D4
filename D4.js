@@ -90,6 +90,20 @@ console.log("n = 15; result: ", resultBoundary5);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function epify(stringa1) {
+  const firstWord = stringa1.split(" ")[0];
+  if (firstWord !== "EPICODE") {
+    return (stringa1 = "EPICODE " + stringa1);
+  } else {
+    return stringa1;
+  }
+}
+
+const resultEpify1 = epify("ciao come va");
+const resultEpify2 = epify("EPICODE ciao come va");
+console.log(resultEpify1);
+console.log(resultEpify2);
+
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
