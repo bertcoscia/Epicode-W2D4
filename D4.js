@@ -123,11 +123,15 @@ function check3and7(n) {
   }
 }
 
-const resultCheck1 = check3and7(21);
-const resultCheck2 = check3and7(4);
+const resultCheck1 = check3and7(9);
+const resultCheck2 = check3and7(14);
+const resultCheck3 = check3and7(21);
+const resultCheck4 = check3and7(4);
 
 console.log(resultCheck1);
 console.log(resultCheck2);
+console.log(resultCheck3);
+console.log(resultCheck4);
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
