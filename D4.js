@@ -41,6 +41,19 @@ console.log("num1 = 2; num2 = 2; risultato: ", resultCrazySum2);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function crazyDiff(num3, num4 = 19) {
+  if (num3 < 19) {
+    return Math.abs(num3 - num4);
+  } else {
+    return Math.abs(num3 - num4) * 3;
+  }
+}
+
+const resultCrazyDiff1 = crazyDiff(18);
+const resultCrazyDiff2 = crazyDiff(26);
+console.log(resultCrazyDiff1);
+console.log(resultCrazyDiff2);
+
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
