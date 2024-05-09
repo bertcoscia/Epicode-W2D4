@@ -111,6 +111,24 @@ console.log(resultEpify2);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function check3and7(n) {
+  if (n % 3 === 0 && n % 7 !== 0) {
+    return "multiplo di 3";
+  } else if (n % 7 === 0 && n % 3 !== 0) {
+    return "multiplo di 7";
+  } else if (n % 3 === 0 && n % 7 === 0) {
+    return "multiplo di 3 e di 7";
+  } else {
+    return "non multiplo di 3 o di 7";
+  }
+}
+
+const resultCheck1 = check3and7(21);
+const resultCheck2 = check3and7(4);
+
+console.log(resultCheck1);
+console.log(resultCheck2);
+
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
