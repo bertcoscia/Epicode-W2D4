@@ -8,8 +8,10 @@ function area(l1, l2) {
   return l1 * l2;
 }
 
-const risultato = area(5, 2);
-console.log("area del rettangolo: ", risultato);
+const returnArea1 = area(5, 2);
+const returnArea2 = area(3, 4);
+console.log("l1 = 5; l2 = 2; area del rettangolo: ", returnArea1);
+console.log("l1 = 3; l2 = 4; area del rettangolo: ", returnArea2);
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -18,6 +20,19 @@ console.log("area del rettangolo: ", risultato);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function crazySum(num1, num2) {
+  if (num1 !== num2) {
+    return num1 + num2;
+  } else {
+    return (num1 + num2) * 3;
+  }
+}
+
+const resultCrazySum1 = crazySum(5, 3);
+const resultCrazySum2 = crazySum(2, 2);
+console.log("num1 = 5; num2 = 3; risultato: ", resultCrazySum1);
+console.log("num1 = 2; num2 = 2; risultato: ", resultCrazySum2);
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
