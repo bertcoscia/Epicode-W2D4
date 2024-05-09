@@ -61,6 +61,27 @@ console.log(resultCrazyDiff2);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function boundary(n) {
+  if (n >= 20 && n <= 100) {
+    return true;
+  } else if (n === 400) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const resultBoundary1 = boundary(20);
+const resultBoundary2 = boundary(77);
+const resultBoundary3 = boundary(100);
+const resultBoundary4 = boundary(400);
+const resultBoundary5 = boundary(15);
+console.log("n = 20; result: ", resultBoundary1);
+console.log("n = 77; result: ", resultBoundary2);
+console.log("n = 100; result: ", resultBoundary3);
+console.log("n = 400; result: ", resultBoundary4);
+console.log("n = 15; result: ", resultBoundary5);
+
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
